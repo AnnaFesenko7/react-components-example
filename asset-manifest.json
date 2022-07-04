@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-components-example/static/css/main.07b88e75.css",
+    "main.js": "/react-components-example/static/js/main.b1f7b273.js",
+    "index.html": "/react-components-example/index.html",
+    "main.07b88e75.css.map": "/react-components-example/static/css/main.07b88e75.css.map",
+    "main.b1f7b273.js.map": "/react-components-example/static/js/main.b1f7b273.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07b88e75.css",
+    "static/js/main.b1f7b273.js"
+  ]
+}
