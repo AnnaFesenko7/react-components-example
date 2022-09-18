@@ -10,6 +10,8 @@ import ColorPicker from './ColorPicker';
 import NotFound from './views/NotFound';
 import Dropdown from './Dropdown';
 import { Alerts } from './views/Alerts';
+import { Timetable } from './Timetable/Timetable';
+import { Filter } from './Filter/Filter';
 
 export const App = () => {
   return (
@@ -23,6 +25,23 @@ export const App = () => {
           <Route path="/counter" element={<Counter initialValue={50} />} />
           <Route path="/dropdown" element={<Dropdown />} />
           <Route path="/alerts" element={<Alerts />} />
+          <Route path="/timetable" element={<Timetable />} />
+          <Route
+            path="/filter"
+            element={
+              <Filter
+                isOpen
+                searchable
+                options={[
+                  { value: 'xs', label: 'Очень маленький' },
+                  { value: 'sm', label: 'Маленький' },
+                  { value: 'md', label: 'Средний' },
+                  { value: 'lg', label: 'Большой' },
+                  { value: 'xl', label: 'Очень большой' },
+                ]}
+              />
+            }
+          />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

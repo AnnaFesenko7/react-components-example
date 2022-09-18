@@ -44,6 +44,20 @@ const Navigation = () => {
       >
         Alerts
       </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/timetable"
+      >
+        Timetable
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/filter"
+      >
+        Filter
+      </NavLink>
     </nav>
   );
 };
