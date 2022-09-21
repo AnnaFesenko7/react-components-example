@@ -32,7 +32,6 @@ const ColorPicker = () => {
             ></span>
           );
         })}
-        ;
       </div>
     </div>
   );

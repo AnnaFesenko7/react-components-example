@@ -12,6 +12,12 @@ import Dropdown from './Dropdown';
 import { Alerts } from './views/Alerts';
 import { Timetable } from './Timetable/Timetable';
 import { Filter } from './Filter/Filter';
+import { ProductReviewForm } from './ProductReviewForm/ProductReviewForm';
+import { VideoPlayer } from './VideoPlayer/VideoPlayer';
+import { Reader } from './Reader/Reader';
+import { Layout } from './Reader/Layout';
+import { CreatePublication } from './Reader/CreatePublication';
+// import publications from '../components/Reader/publications.json';
 
 export const App = () => {
   return (
@@ -42,6 +48,13 @@ export const App = () => {
               />
             }
           />
+          <Route path="/form" element={<ProductReviewForm />} />
+          <Route path="/video" element={<VideoPlayer />} />
+          {/* <Route path="/reader" element={<Reader items={publications} />} /> */}
+          <Route path="/reader" element={<Layout />}>
+            <Route path="reader" element={<Reader />} />
+            <Route path="create" element={<CreatePublication />} />
+          </Route>
 
           <Route path="*" element={<NotFound />} />
         </Routes>

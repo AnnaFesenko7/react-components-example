@@ -29,7 +29,6 @@ const Navigation = () => {
       >
         ColorPicker
       </NavLink>
-
       <NavLink
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
         className={style.link}
@@ -57,6 +56,27 @@ const Navigation = () => {
         to="/filter"
       >
         Filter
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/form"
+      >
+        ProductReviewForm
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/video"
+      >
+        VideoPlayer
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/reader"
+      >
+        Reader
       </NavLink>
     </nav>
   );
