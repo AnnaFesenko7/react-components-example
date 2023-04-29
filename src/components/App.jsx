@@ -15,6 +15,7 @@ import { Filter } from './Filter/Filter';
 import { ProductReviewForm } from './ProductReviewForm/ProductReviewForm';
 import { VideoPlayer } from './VideoPlayer/VideoPlayer';
 import { Reader } from './Reader/Reader';
+import { Recipe } from './Recipe/components/Recipe';
 import { Layout } from './Reader/Layout';
 import { CreatePublication } from './Reader/CreatePublication';
 // import publications from '../components/Reader/publications.json';
@@ -32,6 +33,7 @@ export const App = () => {
           <Route path="/dropdown" element={<Dropdown />} />
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/timetable" element={<Timetable />} />
+          <Route path="/recipe" element={<Recipe />} />
           <Route
             path="/filter"
             element={

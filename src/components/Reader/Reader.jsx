@@ -66,9 +66,9 @@ export class Reader extends Component {
         {showPlaceholder && <div>Еще нет публикаций!</div>}
         {showReaderUI && (
           <>
-            <button type="button" onClick={this.deleteItem}>
+            {/* <button type="button" onClick={this.deleteItem}>
               Delete publication
-            </button>
+            </button> */}
             <Controls
               current={index + 1}
               total={totalItems}

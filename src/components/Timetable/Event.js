@@ -65,8 +65,9 @@ export const Event = ({ event: { name, location, speaker, time, type } }) => {
   return (
     <StyledEvent>
       <StyledTitle>{name}</StyledTitle>
+
       <StyledInfo>
-        <FaMapMarkerAlt />
+        <FaMapMarkerAlt color="red" />
         {location}
       </StyledInfo>
       <StyledInfo>

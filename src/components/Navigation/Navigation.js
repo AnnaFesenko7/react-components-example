@@ -78,6 +78,13 @@ const Navigation = () => {
       >
         Reader
       </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/recipe"
+      >
+        Recipe
+      </NavLink>
     </nav>
   );
 };
