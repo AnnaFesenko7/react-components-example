@@ -25,6 +25,13 @@ const Navigation = () => {
       <NavLink
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
         className={style.link}
+        to="/formikComponent"
+      >
+        FormikComponent
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
         to="/colorPicker"
       >
         ColorPicker

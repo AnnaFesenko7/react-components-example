@@ -6,6 +6,7 @@ import Counter from './Counter';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 import { FormikFromHooks } from './FormikFromHooks/FormikFromHooks';
+import { FormikComponent } from './FormikComponent/FormikComponent';
 import ColorPicker from './ColorPicker';
 import NotFound from './views/NotFound';
 import Dropdown from './Dropdown';
@@ -28,6 +29,7 @@ export const App = () => {
 
         <Routes>
           <Route path="/formikFromHooks" element={<FormikFromHooks />} />
+          <Route path="/formikComponent" element={<FormikComponent />} />
           <Route path="/colorPicker" element={<ColorPicker />} />
           <Route path="/counter" element={<Counter initialValue={50} />} />
           <Route path="/dropdown" element={<Dropdown />} />
