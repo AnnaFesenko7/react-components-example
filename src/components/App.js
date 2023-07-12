@@ -5,7 +5,7 @@ import Counter from './Counter';
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
-import { Boxes } from './views/Boxes';
+import { FormikFromHooks } from './FormikFromHooks/FormikFromHooks';
 import ColorPicker from './ColorPicker';
 import NotFound from './views/NotFound';
 import Dropdown from './Dropdown';
@@ -27,7 +27,7 @@ export const App = () => {
         <AppBar />
 
         <Routes>
-          <Route path="/boxes" element={<Boxes />} />
+          <Route path="/formikFromHooks" element={<FormikFromHooks />} />
           <Route path="/colorPicker" element={<ColorPicker />} />
           <Route path="/counter" element={<Counter initialValue={50} />} />
           <Route path="/dropdown" element={<Dropdown />} />

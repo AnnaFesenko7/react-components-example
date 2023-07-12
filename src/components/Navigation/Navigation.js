@@ -18,9 +18,9 @@ const Navigation = () => {
       <NavLink
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
         className={style.link}
-        to="/boxes"
+        to="/formikFromHooks"
       >
-        Boxes
+        FormikFromHooks
       </NavLink>
       <NavLink
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
