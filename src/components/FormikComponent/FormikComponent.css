@@ -13,12 +13,13 @@ textarea {
 
   border-radius: 4px;
 }
-button[type='submit'] {
+button[type='submit'],
+button[type='button'] {
   margin-top: 20px;
   background-color: transparent;
   color: #555;
 
-  padding: 6px;
+  /* padding: 6px; */
   width: auto;
   height: auto;
 }
