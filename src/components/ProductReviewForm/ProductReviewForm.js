@@ -30,7 +30,7 @@ const validationSchema = Yup.object({
 });
 
 const initialValues = {
-  name: '',
+  name: 'Anna',
   email: '',
   title: '',
   review: '',
@@ -57,7 +57,18 @@ export class ProductReviewForm extends Component {
           <div>
             <label htmlFor="name">Full name</label>
             <div>
-              <Field name="name" type="text" placeholder="Full name" />
+              <Field name="name" type="text" placeholder="Full name">
+                {({ form, field, meta }) => {
+                  return (
+                    <div>
+                      <input id="name" {...field} type="text" />
+                      {/* {meta.error && meta.touched ? (
+                      <div className="error">{meta.error}</div>
+                    ) : null} */}
+                    </div>
+                  );
+                }}
+              </Field>
               <FormError name="name" />
             </div>
           </div>
