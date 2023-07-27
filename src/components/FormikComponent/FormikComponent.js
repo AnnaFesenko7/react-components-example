@@ -18,7 +18,11 @@ const initialValues = {
   phNumbers: [''],
 };
 
-const onSubmit = values => {
+const onSubmit = (values, submitProps) => {
+  console.log(
+    '🚀 ~ file: FormikComponent.js:22 ~ onSubmit ~ submitProps:',
+    submitProps
+  );
   console.log('Form values', values);
 };
 
@@ -166,7 +170,11 @@ export const FormikComponent = () => {
                   </FieldArray>
                   <ErrorMessage name="phNumbers" component={TextError} />
                 </div>
-                <button disabled={!formik.isValid} type="submit">
+                <button
+                  disabled={!formik.isValid || formik.isSubmitting}
+                  // disabled={!formik.isValid}
+                  type="submit"
+                >
                   Submit
                 </button>
               </Form>
