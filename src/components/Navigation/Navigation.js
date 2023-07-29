@@ -22,6 +22,7 @@ const Navigation = () => {
       >
         FormikFromHooks
       </NavLink>
+
       <NavLink
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
         className={style.link}
@@ -29,6 +30,15 @@ const Navigation = () => {
       >
         FormikComponent
       </NavLink>
+
+      <NavLink
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={style.link}
+        to="/formikWithReusableControls"
+      >
+        FormikWithReusableControls
+      </NavLink>
+
       <NavLink
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
         className={style.link}
