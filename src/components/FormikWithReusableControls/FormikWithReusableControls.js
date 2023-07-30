@@ -5,17 +5,11 @@ import * as Yup from 'yup';
 import './FormikComponent.css';
 
 const initialValues = {
-  // name: '',
   email: '',
-  // channel: '',
-  // comments: '',
-  // address: '',
-  // social: {
-  //   facebook: '',
-  //   twitter: '',
-  // },
-  // phoneNumber: ['', ''],
-  // phNumbers: [''],
+  description: '',
+  selectOption: '',
+  radioOption: '',
+  checkboxOption: [],
 };
 
 const onSubmit = (values, submitProps) => {
@@ -23,13 +17,29 @@ const onSubmit = (values, submitProps) => {
 };
 
 const validationSchema = Yup.object({
-  // name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email format').required('Required'),
-  // channel: Yup.string().required('Required'),
-  // comments: Yup.string().required('Required'),
-  // address: Yup.string().required('Required'),
+  description: Yup.string().required('Required'),
+  selectOption: Yup.string().required('Required'),
+  radioOption: Yup.string().required('Required'),
+  checkboxOption: Yup.array().required('Required'),
 });
 
+const dropDownOptions = [
+  { key: 'Select an option', value: '' },
+  { key: 'Option 1', value: 'option1' },
+  { key: 'Option 2', value: 'option2' },
+  { key: 'Option 3', value: 'option3' },
+];
+const radioOptions = [
+  { key: 'Option 1', value: 'rOption1' },
+  { key: 'Option 2', value: 'rOption2' },
+  { key: 'Option 3', value: 'rOption3' },
+];
+const checkboxOptions = [
+  { key: 'Option 1', value: 'cOption1' },
+  { key: 'Option 2', value: 'cOption2' },
+  { key: 'Option 3', value: 'cOption3' },
+];
 export const FormikWithReusableControls = () => {
   return (
     <Formik
@@ -47,13 +57,31 @@ export const FormikWithReusableControls = () => {
               name="email"
               type="email"
             />
-            <button
-              // disabled={!formik.isValid || formik.isSubmitting}
-              // disabled={!formik.isValid}
-              type="submit"
-            >
-              Submit
-            </button>
+            <FormikControl
+              control="textarea"
+              label="Description"
+              name="description"
+              type="text"
+            />
+            <FormikControl
+              control="select"
+              label="Select a topic"
+              name="selectOption"
+              options={dropDownOptions}
+            />
+            <FormikControl
+              control="radio"
+              label="Pick one option"
+              name="radioOption"
+              options={radioOptions}
+            />
+            <FormikControl
+              control="checkbox"
+              label="Checkbox topic"
+              name="checkboxOption"
+              options={checkboxOptions}
+            />
+            <button type="submit">Submit</button>
           </Form>
         );
       }}
