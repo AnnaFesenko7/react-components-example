@@ -25,7 +25,14 @@ button[type='button'] {
 }
 .control {
   margin-bottom: 20px;
+
+  input {
+    display: inline-block;
+  }
 }
 .error {
   color: red;
+}
+.inlineBlock {
+  display: inline-block;
 }

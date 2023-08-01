@@ -19,7 +19,9 @@ export const RadioButtons = props => {
                   value={option.value}
                   checked={option.value === field.value}
                 />
-                <label htmlFor={option.value}>{option.key}</label>
+                <label className="inlineBlock" htmlFor={option.value}>
+                  {option.key}
+                </label>
               </React.Fragment>
             );
           });

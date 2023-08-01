@@ -10,6 +10,7 @@ const initialValues = {
   selectOption: '',
   radioOption: '',
   checkboxOption: [],
+  birthDate: '',
 };
 
 const onSubmit = (values, submitProps) => {
@@ -22,6 +23,7 @@ const validationSchema = Yup.object({
   selectOption: Yup.string().required('Required'),
   radioOption: Yup.string().required('Required'),
   checkboxOption: Yup.array().required('Required'),
+  birthDate: Yup.date().required('Required').nullable(),
 });
 
 const dropDownOptions = [
@@ -80,6 +82,11 @@ export const FormikWithReusableControls = () => {
               label="Checkbox topic"
               name="checkboxOption"
               options={checkboxOptions}
+            />
+            <FormikControl
+              control="date"
+              label="Pick a date"
+              name="birthDate"
             />
             <button type="submit">Submit</button>
           </Form>

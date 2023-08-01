@@ -19,7 +19,9 @@ export const CheckboxGroup = props => {
                   value={option.value}
                   checked={field.value.includes(option.value)}
                 />
-                <label htmlFor={option.value}>{option.key}</label>
+                <label className="inlineBlock" htmlFor={option.value}>
+                  {option.key}
+                </label>
               </React.Fragment>
             );
           });
